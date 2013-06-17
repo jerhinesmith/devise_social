@@ -25,7 +25,7 @@ module Devise
           user = find_or_initialize_by_email(info_hash[:email])
           user.password_optional = true
           user.email_optional = true
-          user.store_info_hash(auth_hash[:info])
+          user.store_info_hash(info_hash)
           user.save
           user
         end
