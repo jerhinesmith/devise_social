@@ -36,10 +36,10 @@ module Devise
           if social_authentication.authenticatable.nil?
             social_authentication.authenticatable = from_info_hash(auth_hash[:info])
             social_authentication.save
+          else
+            social_authentication.authenticatable.store_info_hash(auth_hash[:info])
+            social_authentication.authenticatable.save
           end
-
-          social_authentication.authenticatable.store_info_hash(auth_hash[:info])
-          social_authentication.authenticatable.save
 
           social_authentication.authenticatable
         end

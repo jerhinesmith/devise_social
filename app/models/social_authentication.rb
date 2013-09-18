@@ -14,6 +14,6 @@ class SocialAuthentication < ActiveRecord::Base
   end
 
   def store_auth_hash(auth_hash)
-    self.token = auth_hash.credentials.token
+    self.token = auth_hash.credentials.token if auth_hash.credentials.present?
   end
 end
