@@ -15,6 +15,7 @@ describe SocialAuthentication do
     it { should have_db_column(:provider).of_type(:string) }
     it { should have_db_column(:uid).of_type(:string) }
     it { should have_db_column(:token).of_type(:string) }
+    it { should have_db_column(:secret).of_type(:string) }
     it { should have_db_column(:expires_at).of_type(:datetime) }
 
     it { should have_db_index(:type) }
@@ -29,6 +30,7 @@ describe SocialAuthentication do
     it { should_not allow_mass_assignment_of(:provider) }
     it { should_not allow_mass_assignment_of(:uid) }
     it { should_not allow_mass_assignment_of(:token) }
+    it { should_not allow_mass_assignment_of(:secret) }
     it { should_not allow_mass_assignment_of(:expires_at) }
   end
 

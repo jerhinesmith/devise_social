@@ -5,6 +5,7 @@ FactoryGirl.define do
     provider { Faker::Internet.domain_word }
     uid { Faker::Internet.user_name }
     token { Faker::Lorem.characters(32) }
+    secret { Faker::Lorem.characters(32) }
     expires_at { 1.day.from_now }
 
     trait :user do
