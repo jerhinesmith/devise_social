@@ -15,5 +15,6 @@ class SocialAuthentication < ActiveRecord::Base
 
   def store_auth_hash(auth_hash)
     self.token = auth_hash.credentials.token if auth_hash.credentials.present?
+    self.secret = auth_hash.credentials.secret if auth_hash.credentials.present?
   end
 end
