@@ -7,8 +7,8 @@ require "devise_social/version"
 Gem::Specification.new do |s|
   s.name        = "devise_social"
   s.version     = DeviseSocial::VERSION
-  s.authors     = ["Umair Siddique"]
-  s.email       = ["umairsiddique@gmail.com"]
+  s.authors     = ["Justin Rhinesmith"]
+  s.email       = ["jerhinesmith@gmail.com"]
   s.homepage    = ""
   s.summary     = "Devise Social"
   s.description = "Devise Social"

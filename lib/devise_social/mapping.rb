@@ -7,7 +7,7 @@ module DeviseSocial
     private
       def default_controllers_with_social(options)
         options[:controllers] ||= {}
-        options[:controllers][:omniauth_callbacks] ||= 'devise_social/omniauth_callbacks'
+        options[:controllers][:omniauth_callbacks] = 'devise_social/omniauth_callbacks' if options[:controllers][:omniauth_callbacks].nil?
         default_controllers_without_social(options)
       end
   end
